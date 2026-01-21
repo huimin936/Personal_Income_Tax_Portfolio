@@ -1,7 +1,1 @@
-create table category (
-   cat_id    varchar(5)  not null,
-   description    varchar(30) not null,
-   min_price    number(6,2),
-   max_price    number(6,2),
-primary key(cat_id)
-);
+
