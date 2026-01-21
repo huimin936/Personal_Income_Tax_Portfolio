@@ -1,0 +1,16 @@
+CREATE TABLE tax_rules (
+    rule_id     NUMBER(10)       NOT NULL,
+    income_from NUMBER(10,2)     NOT NULL,
+    income_to   NUMBER(10,2)     NOT NULL,
+    tax_rate    NUMBER(5,2)      NOT NULL,
+    
+    CONSTRAINT pk_tax_rules PRIMARY KEY (rule_id)
+);
+
+INSERT INTO tax_rules VALUES (1, 0,     50000,  5);
+INSERT INTO tax_rules VALUES (2, 50001, 100000, 10);
+INSERT INTO tax_rules VALUES (3, 100001,150000, 15);
+INSERT INTO tax_rules VALUES (4, 150001,999999, 20);
+
+COMMIT;
+

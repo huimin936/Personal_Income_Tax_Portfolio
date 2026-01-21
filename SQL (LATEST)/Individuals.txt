@@ -1,0 +1,18 @@
+CREATE TABLE individuals (
+    individual_id   NUMBER(10)     NOT NULL,
+    annual_income   NUMBER(10,2),
+    employment_type VARCHAR2(20),
+    age_group       VARCHAR2(10),
+    
+    CONSTRAINT pk_individuals PRIMARY KEY (individual_id)
+);
+
+
+INSERT INTO individuals VALUES (1, 45000, 'Employment','20-29');
+INSERT INTO individuals VALUES (2, 65000, 'Employment','30-39');
+INSERT INTO individuals VALUES (3, 90000, 'Self-employed','30-39');
+INSERT INTO individuals VALUES (4, 120000, 'Employment', '40-49');
+INSERT INTO individuals VALUES (5, 180000, 'Employment', '40-49');
+
+
+COMMIT;

@@ -1,0 +1,17 @@
+CREATE TABLE tax_relief (
+    relief_id      NUMBER(10)       NOT NULL,
+    individual_id  NUMBER(10)       NOT NULL,
+    relief_type    VARCHAR2(20),
+    relief_amount  NUMBER(10,2),
+
+    CONSTRAINT pk_tax_relief PRIMARY KEY (relief_id),
+    CONSTRAINT fk_tax_relief_ind FOREIGN KEY (individual_id) REFERENCES individuals (individual_id)
+);
+
+INSERT INTO tax_relief VALUES (1, 1, 'EPF', 4000);
+INSERT INTO tax_relief VALUES (2, 1, 'Insurance', 2500);
+INSERT INTO tax_relief VALUES (3, 2, 'EPF', 6000);
+INSERT INTO tax_relief VALUES (4, 3, 'Education', 3000);
+INSERT INTO tax_relief VALUES (5, 4, 'EPF', 8000);
+
+COMMIT;
